@@ -21,16 +21,7 @@ public class EjemploMatriz {
 
     public static void abajo(int m,int n,int y, int x,String[][] matriz) {
         y++;
-        if(m>2) {
-            matriz[y][x] = "*";
-        }
-        else if (x == 0 || matriz[y][x-1] == null ) {
-            matriz[y][x] = "*";
-            x++;
-        }
-        else {
-            x++;
-        }
+        matriz[y][x] = "*";
         if(x!=n-1){
             if(y!=m-1){
                 x++;
