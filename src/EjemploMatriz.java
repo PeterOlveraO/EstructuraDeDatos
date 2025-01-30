@@ -20,7 +20,9 @@ public class EjemploMatriz {
     }
 
     public static void abajo(int m,int n,int y, int x,String[][] matriz) {
-        y++;
+        if(m >= 2) {
+            y++;
+        }
         matriz[y][x] = "*";
         if(x!=n-1){
             if(y!=m-1){
@@ -28,6 +30,10 @@ public class EjemploMatriz {
                 matriz[y][x] = "*";
                 abajo(m,n,y,x,matriz);
             } else {
+                if(m<=2){
+                    imprimir(m,n,matriz);
+
+                }
                 arriba(m,n,y,x,matriz);
             }
         } else {
@@ -61,5 +67,6 @@ public class EjemploMatriz {
             }
             System.out.print("\n");
         }
+        System.exit(0);
     }
 }
